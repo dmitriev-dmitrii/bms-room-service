@@ -1,0 +1,124 @@
+* {
+	box-sizing: border-box;
+
+	outline-color: $accentColor;
+	outline-width: 0.3rem;
+	outline-offset: 0.2rem;
+
+	&::before,
+	&::after {
+		box-sizing: border-box;
+	}
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+button,
+summary {
+	cursor: pointer;
+}
+
+button[disabled] {
+	opacity: 0.5 !important;
+	cursor: default !important;
+	&:hover,
+	&:active,
+	&:focus {
+		opacity: 0.5 !important;
+		cursor: default !important;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+li,
+summary,
+details {
+	font-weight: inherit;
+	font-size: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+p {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	color: currentColor;
+	text-decoration: none;
+}
+
+input::-webkit-input-placeholder {
+	opacity: 1;
+	transition: opacity 0.2s ease;
+}
+input::-moz-placeholder {
+	opacity: 1;
+	transition: opacity 0.2s ease;
+}
+input:-moz-placeholder {
+	opacity: 1;
+	transition: opacity 0.2s ease;
+}
+input:-ms-input-placeholder {
+	opacity: 1;
+	transition: opacity 0.2s ease;
+}
+
+input:focus::-webkit-input-placeholder {
+	opacity: 0;
+	transition: opacity 0.2s ease;
+}
+input:focus::-moz-placeholder {
+	opacity: 0;
+	transition: opacity 0.2s ease;
+}
+input:focus:-moz-placeholder {
+	opacity: 0;
+	transition: opacity 0.2s ease;
+}
+input:focus:-ms-input-placeholder {
+	opacity: 0;
+	transition: opacity 0.2s ease;
+}
+
+// details {
+//     border: 1px solid currentColor;
+//     border-radius: 5px;
+// 	margin: 1em 0;
+//     padding: .5em ;
+// }
+
+// summary {
+//     margin: -.5em ;
+//     padding: .5em;
+// 	transition: all 0.2s ease;
+// }
+
+// details[open] {
+//     padding: .5em;
+// 	// box-shadow:0 0 3px 2px $accentColor ;
+// }
+
+// details[open] summary {
+// 	box-shadow:0 0 3px 2px $accentColor inset;
+//     border-bottom: 1px solid currentColor;
+//     margin-bottom: .5em;
+// }

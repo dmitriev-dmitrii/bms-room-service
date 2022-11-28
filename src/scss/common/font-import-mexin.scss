@@ -1,0 +1,9 @@
+@mixin font($url, $family, $weight, $style) {
+	@font-face {
+		font-display: swap;
+		font-family: $family;
+		font-style: #{$style};
+		font-weight: $weight;
+		src: url("../fonts/#{$url}.woff2") format("woff2"), url("../fonts/#{$url}.woff") format("woff");
+	}
+}

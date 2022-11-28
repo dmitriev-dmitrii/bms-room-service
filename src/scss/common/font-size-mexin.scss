@@ -1,0 +1,38 @@
+@use "sass:math";
+
+@mixin fontSize($minFontSize, $maxFontSize) {
+	
+
+	$slopeMinWidth: ($minWidth*0.1);
+	$slopeMaxWidth: ($maxWidth*0.1);
+
+
+	$slope: math.div($maxFontSize - $minFontSize, $slopeMaxWidth - $slopeMinWidth);
+	$yAxisIntersection: -$slopeMinWidth * $slope + $minFontSize;
+
+	// статичный font Size  до 375px
+	font-size: #{$minFontSize}rem;
+
+	// динамический font Size
+	@media (min-width: 374.98px) {
+		font-size: calc(#{$yAxisIntersection}rem + #{$slope * 100}vw);
+	}
+
+	// статичный font Size для desktop
+	@media (min-width: #{$maxWidth}px) {
+		font-size: #{$maxFontSize}rem;
+	}
+}
+
+// пример:
+// .SUPERSLECTOR {
+// 	@include fontSize(2, 5.5);
+// }
+
+// или
+
+// body {
+// 	@include fontSize(1.5, 1.8);
+// }
+
+// указывавать значения просто цифрой в rem размер будет резиновый
