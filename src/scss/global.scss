@@ -1,15 +1,38 @@
-body {
-	background-color: $bodyBg;
-	color: $bodyColor;
+* {
+	box-sizing: border-box;
 
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	outline-color: $accentColor;
+	outline-width: 0.3rem;
+	outline-offset: 0.2rem;
 
-	@include fontSize(1.4, 1.8);
+	&::before,
+	&::after {
+		box-sizing: border-box;
+	}
 }
 
-.contanier {
+
+html {
+	font-size: 62.5% ; // 10px
+
+}
+
+body {
+
+	background-color: $mainBgColor;
+	color: $defaultTxtColor;
+
+	font-family: Raleway-Regular;
+
+	@include fontSize(1.4,1.6);
+
+}
+
+
+
+.container {
 	width: 100%;
 	max-width: #{$maxWidth}px;
 	margin: 0 auto;
+	padding: 1.5rem 1rem;
 }

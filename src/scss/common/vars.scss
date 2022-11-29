@@ -1,15 +1,17 @@
-// maxWidth-максимальная гирина контейнера по макету, так же используется в мексине для Font-Size
-$maxWidth: 900;
+// maxWidth-максимальная контейнера по макету, так же используется в мексине для Font-Size
+$maxWidth: 1200;
 $minWidth: 320;
 
-$loadingColor: #ff6a00;
-$succesColor: #39d353;
+$warningColor: #ff6a00;
+$successColor: #39d353;
 $errorColor: #ff0033;
 
+$titleTxtColor: #070051;
+$defaultTxtColor:#7E7D8E;
 
-$bodyBg: #111111;
+$accentColor: #2D50FB;
 
-$bodyColor: #c9d1d9;
+$mainBgColor:#ffff;
+$accentBgColor: rgba(45, 80, 251, 0.8);
 
-$accentColor: rgb(0, 253, 139);
-$linkColor: #2d9cdb;
+

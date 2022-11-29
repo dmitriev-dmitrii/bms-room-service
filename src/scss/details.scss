@@ -1,0 +1,26 @@
+
+
+.details {
+  $spacer: 0.5em;
+
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  padding: $spacer $spacer 0 $spacer;
+
+
+& summary {
+  font-weight: bold;
+  margin: (-$spacer) (-$spacer) 0;
+  padding: $spacer;
+  border-bottom: 1px solid rgba(0,0,0,0);
+}
+
+&[open] {
+  padding: $spacer $spacer $spacer $spacer;
+}
+
+&[open] summary {
+  border-bottom: 1px solid currentColor;
+  margin-bottom: $spacer;
+}
+}

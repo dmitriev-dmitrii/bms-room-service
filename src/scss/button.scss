@@ -1,0 +1,10 @@
+.button {
+  padding: 1rem 2rem;
+  border:none;
+  border-radius: 5px;
+ font-family: Raleway-SemiBold;
+  color: $mainBgColor;
+  background-color: $accentColor;
+  @include fontSize(1.4,1.6);
+
+}

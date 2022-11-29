@@ -1,0 +1,13 @@
+
+.title {
+  font-family: Raleway-Bold;
+
+
+}
+
+h1{
+  font-family: Raleway-Black;
+  @include fontSize(2.3,5);
+  color:$titleTxtColor;
+
+}
