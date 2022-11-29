@@ -1,0 +1,35 @@
+.header {
+  box-shadow:  lighten($defaultTxtColor,70%) 0 0 6px 1px;
+  position: sticky;
+
+  &__nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo{
+
+    }
+    &__ul{
+      margin: 0;
+      display: flex;
+      align-items: center;
+      list-style-type:none;
+    }
+    &__ul-item {
+      margin: 0.5rem  2rem;
+      padding: 0;
+      font-family: Raleway-SemiBold;
+
+      a {
+        padding: 0.25rem;
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+    &__menu-toggle{
+      display: none;
+    }
+  }
+
+}

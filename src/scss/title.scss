@@ -7,7 +7,7 @@
 
 h1{
   font-family: Raleway-Black;
-  @include fontSize(2.3,5);
+  @include fontSize(2.3,4);
   color:$titleTxtColor;
 
 }
