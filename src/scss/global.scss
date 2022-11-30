@@ -14,11 +14,11 @@
 
 html {
 	font-size: 62.5% ; // 10px
-
+	scroll-behavior: smooth;
 }
 
 body {
-
+	overflow-x:hidden ;
 	background-color: $mainBgColor;
 	color: $defaultTxtColor;
 
@@ -29,10 +29,12 @@ body {
 }
 
 
-
 .container {
 	width: 100%;
 	max-width: #{$maxWidth}px;
 	margin: 0 auto;
-	padding: 1.5rem 1rem;
+	padding: 1.5rem  0;
+}
+.accent-bg{
+	background-color: $accentBgColor;
 }

@@ -4,6 +4,7 @@
   border-radius: 6px;
  font-family: Raleway-SemiBold;
   color: $mainBgColor;
+  white-space: nowrap;
   background-color: $accentColor;
   @include fontSize(1.4,1.6);
 

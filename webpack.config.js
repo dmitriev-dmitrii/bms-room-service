@@ -1,8 +1,12 @@
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require("path");
 const glob = require('glob');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PurgeCssPlugin = require('purgecss-webpack-plugin')
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 module.exports = (env) => {
 
@@ -61,8 +65,29 @@ module.exports = (env) => {
       ]
     },
     plugins: [
+      new webpack.ProgressPlugin(),
+      new SpriteLoaderPlugin(),
       new MiniCssExtractPlugin({
         filename: isProdMode ? "[contenthash:9].css" : "index.css",
+      }),
+      new ImageminPlugin({
+        test: path.resolve(__dirname, './src/img/**/*'),
+        optimizationLevel: 3,
+        progressive: true,
+      }),
+      new ImageminWebpWebpackPlugin({
+        config: [
+          {
+            test: /\.(jpe?g|png)/,
+            options: {
+              quality: 85,
+            },
+          },
+        ],
+        overrideExtension: true,
+        detailedLogs: false,
+        silent: false,
+        strict: true,
       }),
       new PurgeCssPlugin({
         paths: () => glob.sync( path.join(__dirname, 'src/**/*') , { nodir: true })

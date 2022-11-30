@@ -1,0 +1,31 @@
+.footer {
+  margin-top: 3rem;
+  background-color: $footer-bg;
+  color: $mainBgColor;
+
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100px;
+  }
+
+  &__nav-ul,
+  &__copyright-ul
+  {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    &-item{
+      margin: 1rem;
+      a {
+        padding: 0.25rem;
+      }
+    }
+  }
+}

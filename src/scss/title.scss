@@ -1,13 +1,7 @@
 
 .title {
-  font-family: Raleway-Bold;
-
-
-}
-
-h1{
   font-family: Raleway-Black;
-  @include fontSize(2.3,4);
-  color:$titleTxtColor;
-
+  @include fontSize(3,4);
+  margin: 3rem 0;
 }
+
