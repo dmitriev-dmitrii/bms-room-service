@@ -1,11 +1,18 @@
-.main-title {
-  margin-top: 1.5em;
-  padding: 3em;
+
+.call-to-action,
+.call-to-action--reverse
+{
   display:flex;
-  flex-direction: row-reverse;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+
+  padding: 3em;
 
 
+  background-color: $accentBgColor;
   //background: linear-gradient(125deg, $accentBgColor 30%,  $accentColor 90%);
   border-radius: 30px;
 
@@ -16,16 +23,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-end;
 
     height: 100%;
     max-width: 60%;
 
-    h1{
+    .title{
       font-family: Raleway-Black;
       @include fontSize(4,4.5);
       color:$titleTxtColor;
-      margin-bottom: 0;
+      margin: 0;
     }
     p{
       @include fontSize(1.6,2);
@@ -41,5 +47,20 @@
     max-height: 50rem;
     max-width: 30%;
     object-fit: cover;
+  }
+
+}
+.call-to-action{
+  flex-direction: row;
+  .call-to-action__description {
+    text-align: left;
+    align-items: flex-start;
+  }
+}
+.call-to-action--reverse {
+  flex-direction: row-reverse;
+  .call-to-action__description {
+    text-align: right;
+    align-items: flex-end;
   }
 }
